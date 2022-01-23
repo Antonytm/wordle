@@ -1,0 +1,28 @@
+1. mph_ua.db 
+
+2.
+SELECT REPLACE(reestr, '"', '')
+       word
+  FROM nom
+  WHERE
+  LENGTH(word) = 5
+  AND(
+  part =5
+  OR part = 6
+  OR part =7
+  OR part =8
+  OR part =13
+  OR part =21
+  OR part =22
+  OR part =23
+  OR part =24
+  OR part =38
+  OR part =39
+  OR part =40
+  OR part =41
+  OR part =55);
+
+3. 
+[А-ЩЬЮЯҐЄІЇ]{1}[а-щьюяґєії]{4}\r\n
+
+4.
