@@ -1,5 +1,6 @@
 import { WORDS } from '../constants/wordlist'
 import { VALIDGUESSES } from '../constants/validGuesses'
+import { POPULAR_WORDS } from "../constants/popularWordList";
 
 export const isWordInWordList = (word: string) => {
   return (
@@ -13,14 +14,14 @@ export const isWinningWord = (word: string) => {
 }
 
 export const getWordOfDay = () => {
-  // January 1, 2022 Game Epoch
-  const epochMs = 1641013200000
+  // January 22, 2022 Game Epoch
+  const epochMs = 1642914000000;
   const now = Date.now()
   const msInDay = 86400000
   const index = Math.floor((now - epochMs) / msInDay)
 
   return {
-    solution: WORDS[index].toUpperCase(),
+    solution: POPULAR_WORDS[index].toUpperCase(),
     solutionIndex: index,
   }
 }
